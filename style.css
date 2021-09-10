@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+:root {
+  --background-img: url('https://source.unsplash.com/random');
+  --main-gradient: rgba(0, 0, 0, 0.4);
+  --user-text-gradient: #e8cbc0;
+  --you-text-gradient: #e8cbc0;
+  --reply-text-gradient: white;
+  --main-color: white;
+  --second-color: #e8cbc0;
+  --active-color: rgba(0, 0, 0, 0.4);
+}
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Scrollbar Styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--main-color);
+}
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 4px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 20px;
+  border: transparent;
+}
+/* Main App Styling */
+main {
+  width: 100vw;
+  height: 100vh;
+  background: var(--background-img);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.background {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 55vw;
+  height: 95vh;
+  padding: 20px;
+  border-radius: 15px;
+  background: var(--main-gradient);
+}
+.message-container {
+  height: 85vh;
+  width: 100%;
+  background-color: transparent;
+  overflow-y: auto;
+  overflow-x: hidden;
+  word-break: break-all;
+  position: relative;
+}
+.form-message {
+  height: 5vh;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  align-items: flex-end;
+  margin-top: 10px;
+}
+.form-message input {
+  height: 90%;
+  font-size: 20px;
+}
+.write-message {
+  width: 100%;
+  height: 40px;
+  border: none;
+  padding: 5px;
+}
+.write-message:focus {
+  outline: none;
+}
+.send-message {
+  width: 30%;
+  height: 90%;
+  border: none;
+  font-size: 20px;
+  color: #0f0c29;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+  background: var(--second-color);
+}
+.you,
+.stranger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  background-color: transparent;
+  margin: 6px 0px;
+  padding: 5px;
+}
+.you {
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  background: var(--user-text-gradient);
+}
+.stranger {
+  background: var(--you-text-gradient);
+}
+.profile-img {
+  width: 50px;
+  height: 50px;
+  align-self: flex-start;
+  margin: 10px 0px;
+}
+.txt-msg {
+  margin: 5px;
+  padding: 5px;
+  line-height: 26px;
+}
+.replay {
+  border: none;
+  background-color: transparent;
+  font-size: 25px;
+  padding: 10px 6px 10px 2px;
+}
+.replay:hover {
+  color: var(--main-color);
+  cursor: pointer;
+}
+.p-event {
+  pointer-events: none;
+}
+.reply-msg {
+  background: var(--reply-text-gradient);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px 0px;
+}
+.replied-msg {
+  max-height: 80px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.replied-msg .replay {
+  display: none;
+}
+
+/* Styling for the Template Options Navbar*/
+.choose-template {
+  list-style: none;
+  position: fixed;
+  z-index: 4;
+  top: 14%;
+  left: 7%;
+}
+.template-option {
+  width: 150px;
+  height: 60px;
+  margin: 20px;
+}
+.template-change {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  background-color: var(--main-color);
+  color: var(--second-color);
+  border: none;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.template-change:hover {
+  background-color: var(--active-color);
+}
+.active {
+  background-color: var(--active-color);
+}
