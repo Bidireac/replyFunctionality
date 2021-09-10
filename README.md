@@ -27,4 +27,4 @@ Project is:  _finished
 
 ## Live Demo
 
-https://naughty-sammet-ecbf05.netlify.app/
+https://dazzling-wright-3a6b87.netlify.app/
